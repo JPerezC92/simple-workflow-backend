@@ -1,0 +1,22 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "activate venv",
+      "type": "shell",
+      "command": "source .venv/bin/activate && uvicorn main:app --reload",
+      "presentation": {
+        "focus": true
+      },
+      "runOptions": {
+        "runOn": "folderOpen"
+      }
+    },
+    // save requirements.txt
+    {
+      "label": "save requirements.txt",
+      "type": "shell",
+      "command": "source .venv/bin/activate && python -m pip freeze > requirements.txt"
+    }
+  ]
+}
